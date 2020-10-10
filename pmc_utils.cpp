@@ -49,11 +49,7 @@ void usage(char *argv0) {
 }
 
 
-double get_time() {
-    timeval t;
-    gettimeofday(&t, NULL);
-    return t.tv_sec*1.0 + t.tv_usec/1000000.0;
-}
+double get_time() { return (double)time(NULL); }
 
 string memory_usage() {
     ostringstream mem;

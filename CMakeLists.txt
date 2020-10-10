@@ -10,9 +10,10 @@ set(PMC_SOURCE_FILES
         ${CMAKE_CURRENT_SOURCE_DIR}/pmc_utils.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/pmc_graph.cpp
         ${CMAKE_CURRENT_SOURCE_DIR}/pmc_clique_utils.cpp
+        ${CMAKE_CURRENT_SOURCE_DIR}/getopt.c
         )
 
-add_library(pmc SHARED ${PMC_SOURCE_FILES})
+add_library(pmc ${PMC_SOURCE_FILES})
 
 target_include_directories(pmc PUBLIC
         $<BUILD_INTERFACE:${CMAKE_CURRENT_BINARY_DIR}/include>
